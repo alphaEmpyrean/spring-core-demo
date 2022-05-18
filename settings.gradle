@@ -13,4 +13,5 @@ include('vanillaJavaNoDI',
 'vanillaJavaSetterDI',
 'springXmlConstructorDI',
 'springXmlSetterDI',
-'springJavaConstructorDI')
+'springJavaConstructorDI',
+'springJavaSetterDI')
