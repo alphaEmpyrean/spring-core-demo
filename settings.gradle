@@ -9,4 +9,4 @@
 
 rootProject.name = 'spring-core-demo'
 include('vanillaJavaNoDI','vanillaJavaConstructorDI','vanillaJavaSetterDI',
-            'springXmlConstructorDI')
+            'springXmlConstructorDI','springXmlSetterDI')
