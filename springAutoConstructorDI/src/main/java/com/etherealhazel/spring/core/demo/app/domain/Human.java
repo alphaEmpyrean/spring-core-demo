@@ -1,5 +1,6 @@
 package com.etherealhazel.spring.core.demo.app.domain;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
@@ -8,6 +9,10 @@ public class Human {
     
     public Pants pants;
     
+    public Human() {
+    }
+
+    @Autowired
     public Human(@Qualifier("cargoPants") Pants pants) {
         this.pants = pants;
     }
