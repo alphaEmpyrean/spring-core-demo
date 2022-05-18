@@ -3,23 +3,27 @@
  */
 package com.etherealhazel.spring.core.demo.app;
 
-import com.etherealhazel.spring.core.demo.app.domain.BlueJeans;
 //import com.etherealhazel.spring.core.demo.app.domain.CargoPants;
 import com.etherealhazel.spring.core.demo.app.domain.Human;
-import com.etherealhazel.spring.core.demo.app.domain.Pants;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 //The issue now is that we still need to maintain the lifecycle
 //of the pants objects here in the main method.
 
 public class App {
     public static void main(String[] args) {
-        
-        Pants bluejeans = new BlueJeans();
-        //Pants cargoPants = new CargoPants();
 
-        Human human = new Human(bluejeans);
+        ClassPathXmlApplicationContext applicationContext = new ClassPathXmlApplicationContext("beans.xml");
+        
+        Human human = applicationContext.getBean("human", Human.class);
+        // Pants bluejeans = new BlueJeans();
+        // //Pants cargoPants = new CargoPants();
+
+        // Human human = new Human(bluejeans);
         
         human.goOutside();    
   
+        applicationContext.close();
+        
     }
 }
