@@ -1,3 +1,5 @@
+//https://www.vojtechruzicka.com/field-dependency-injection-considered-harmful/
+
 package com.etherealhazel.spring.core.demo.app.domain;
 
 import org.springframework.beans.factory.annotation.Autowired;
